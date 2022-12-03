@@ -12,6 +12,14 @@ Be careful that the data type is compatible when you map. Entrez have to be ints
 
 Future implementations will fous on expanding the IDs that are supported (e.g. diseases)
 
+## Installation
+
+Biomapy can be installed via pip
+
+```
+pip install biomapy
+
+```
 
 ## Usage
 
