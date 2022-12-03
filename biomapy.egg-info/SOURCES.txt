@@ -1,0 +1,11 @@
+README.md
+setup.py
+biomapy/__init__.py
+biomapy/biomapy.py
+biomapy.egg-info/PKG-INFO
+biomapy.egg-info/SOURCES.txt
+biomapy.egg-info/dependency_links.txt
+biomapy.egg-info/requires.txt
+biomapy.egg-info/top_level.txt
+biomapy/datasets/HUMAN_9606_idmapping.dat.gz
+biomapy/datasets/Homo_sapiens.gene_info.gz
