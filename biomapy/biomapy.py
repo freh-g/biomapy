@@ -47,7 +47,7 @@ def gene_mapping_many(query_list,source,target):
 	    return list(map(dictio.get,query_list))
 
 	elif source=='entrez' and target=='uniprot':
-	    dictio=dict(zip(list(reversed(tab_uni[tab_uni.mapper=='GeneID'].id.tolist())),
+	    dictio=dict(zip([int(g) for g in list(reversed(tab_uni[tab_uni.mapper=='GeneID'].id.tolist()))],
 			    list(reversed(tab_uni[tab_uni.mapper=='GeneID'].uniprot.tolist()))))
 	    return list(map(dictio.get,query_list))
 
@@ -68,5 +68,10 @@ def gene_mapping_many(query_list,source,target):
 	elif source=='uniprot' and target=='ensembl':
 	    dictio=dict(zip(list(reversed(tab_uni[tab_uni.mapper=='Ensembl'].uniprot.tolist())),
 			    list(reversed(tab_uni[tab_uni.mapper=='Ensembl'].id.tolist()))))
+	    return list(map(dictio.get,query_list))
+
+	elif source=='uniprot' and target=='entrez':
+	    dictio=dict(zip(list(reversed(tab_uni[tab_uni.mapper=='GeneID'].uniprot.tolist())),
+			    [int(g) for g in list(reversed(tab_uni[tab_uni.mapper=='GeneID'].id.tolist()))]))
 	    return list(map(dictio.get,query_list))
 
