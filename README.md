@@ -28,12 +28,13 @@ A tipical call for gene_mapping_many() is as follows:
 ```
 gene_symbol_list=['A1BG','TGFB','BMP2']
 
-gene_entrez_list=gene_mapping_many(gene_symbol_lyst,'symbol','entrez')
+gene_entrez_list=gene_mapping_many(gene_symbol_list,'symbol','entrez')
 
 gene_entrez_list
 
+[1,7040,650]
+
 ```
 
-**Output:**
 
-[1,7040,650]
+
